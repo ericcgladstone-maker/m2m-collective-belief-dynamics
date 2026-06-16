@@ -1,0 +1,12 @@
+# Analysis and figures (system python3)
+numpy
+pandas
+statsmodels
+scipy
+matplotlib
+python-docx
+
+# Experiment runners (LLM provider SDKs)
+openai
+anthropic
+google-generativeai
