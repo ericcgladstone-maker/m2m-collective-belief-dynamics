@@ -1,6 +1,6 @@
 # Export notes
 
-This folder is the public code export for the paper *Communication content and topology shape collective belief in networks of machine agents* (Gladstone & Brashears, in preparation), the third paper in the M2M program. It is curated from the project's working `code/` directory.
+This folder is the public code export for the paper *Communication content and local connectivity shape collective accuracy in networks of machine agents* (Gladstone, in preparation), the third paper in the M2M program. It is curated from the project's working `code/` directory.
 
 ## What is included
 - The simulation rig (`engine.py`, `tasks.py`, `agents.py`, `provider.py`, `metrics.py`, `config.py`).
@@ -10,7 +10,7 @@ This folder is the public code export for the paper *Communication content and t
 - `README.md`, `requirements.txt`, `RUN_GUIDE.md`.
 
 ## What is excluded, and why
-- **Raw data** (`data/`, transcripts, per-trial CSVs): deposited separately on OSF (link forthcoming); excluded here for size.
+- **Raw data** (`data/`, transcripts, per-trial CSVs): deposited separately on OSF (https://doi.org/10.17605/OSF.IO/AU2GS); excluded here for size.
 - **API keys** (`.env`): never committed.
 - **Results outputs** (`stats_report*.md`, `RESULTS.md`, `AUDIT.md`) and **figures**: regenerable from the scripts; omitted pending publication.
 - **Internal development log** (`DECISIONS.md`) and the **manuscript / supplementary materials**: not part of the code release.

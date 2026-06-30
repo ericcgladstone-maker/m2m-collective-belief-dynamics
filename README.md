@@ -1,6 +1,6 @@
-# Communication content and topology shape collective belief in networks of machine agents
+# Communication content and local connectivity shape collective accuracy in networks of machine agents
 
-Code for the distributed-inference experiments in Gladstone & Brashears (manuscript in preparation), the third paper in the machine-to-machine (M2M) program. Stateless LLM agents each hold a private, noisy signal about a hidden binary state and exchange messages over a network. We manipulate **communication content** (sharing evidence vs. sharing conclusions) and **network topology**, and measure collective accuracy, mean individual error, and belief diversity.
+Code for the distributed-inference experiments in Gladstone (manuscript in preparation), the third paper in the machine-to-machine (M2M) program. Stateless LLM agents each hold a private, noisy signal about a hidden binary state and exchange messages over a network. We manipulate **communication content** (sharing evidence vs. sharing conclusions) and **network topology**, and measure collective accuracy, mean individual error, and belief diversity.
 
 ## Repository layout
 
@@ -17,8 +17,8 @@ Code for the distributed-inference experiments in Gladstone & Brashears (manuscr
 
 ## Data
 
-Raw per-round transcripts and per-trial result tables are deposited separately (OSF; link forthcoming) and are not included here due to size. The runners regenerate them from scratch given API access.
+Raw per-round transcripts and per-trial result tables are deposited separately on the Open Science Framework (https://doi.org/10.17605/OSF.IO/AU2GS) and are not included here due to size. The runners regenerate them from scratch given API access.
 
 ## Citation
 
-Gladstone, E., & Brashears, M. E. Communication content and topology shape collective belief in networks of machine agents. Manuscript in preparation. (Full citation forthcoming.)
+Gladstone, E. Communication content and local connectivity shape collective accuracy in networks of machine agents. Manuscript in preparation. (Full citation forthcoming.)
