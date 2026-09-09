@@ -5,6 +5,11 @@ matches what we reported (within rounding). Also checks structural integrity of 
 data: trial counts, round structure, belief ranges, message realness, duplicate keys,
 and raw(transcripts) vs derived(rounds.csv) consistency. Deterministic and re-runnable;
 the point is to NOT trust prose summaries. Writes nothing it can't recompute.
+
+Section 12 delegates to audit_revision.py, which covers every quantity introduced or
+changed during the major revision (PNASNEXUS-2026-01296). Running this file is therefore
+the single entry point for verifying the manuscript and Supplementary Materials against the
+archived data; it also writes audit_results.json.
 """
 from __future__ import annotations
 import csv, json, math, sys
@@ -183,6 +188,95 @@ else:
                f"from excluded ({min(exc):.2f}–{max(exc):.2f}); gap {gap:.2f} — supports paper's inclusion/exclusion")
         else:
             bad(f"adequacy gate does NOT cleanly separate admit/exclude (gap {gap:.2f})")
+    gem = [g.get((m, "misleading_majority")) for m in ("gemini-2.5-flash", "gemini-2.5-pro")]
+    if None not in gem and min(gem) >= 0.83:
+        ok(f"gemini gate re-derives from adequacy.csv (flash {gem[0]:.2f}, pro {gem[1]:.2f} misleading; admitted)")
+    elif None in gem:
+        warn("gemini gate rows not in adequacy.csv")
+
+# ---------- 6. VERDICT LEAKAGE in evidence_only messages ----------
+print("\n" + "="*70, "\n6. VERDICT LEAKAGE (evidence_only messages)\n", "="*70)
+try:
+    import check_leakage
+    _tot, _fl = check_leakage.count_leakage()
+    if _tot > 0 and len(_fl) == 0:
+        ok(f"verdict leakage: 0 of {_tot} evidence_only messages contain a verdict (clean)")
+    elif _tot > 0:
+        bad(f"verdict leakage: {len(_fl)} of {_tot} evidence_only messages flagged (CHECK)")
+    else:
+        warn("verdict leakage: no evidence_only messages found")
+except Exception as _e:
+    warn(f"leakage check skipped: {_e}")
+
+# ---------- 7. INFORMATION-SUFFICIENCY BENCHMARK + RECIPIENT COUNTERFACTUAL (S6.6) ----------
+print("\n" + "="*70, "\n7. INFORMATION SUFFICIENCY (confidence-weighted benchmark, recipient counterfactual)\n", "="*70)
+try:
+    import analyze_benchmark as AB
+    # round-0 verdicts: head-count favors false (0.00), confidence-weighted/log-pool favor true (1.00);
+    # actual terminal reproduces the manuscript's conclusion-sharing cells.
+    EXP_ACTUAL = {"gpt-4.1-mini": 0.64, "claude-sonnet-4-6": 0.62, "gemini-2.5-flash": 0.93}
+    for fam, tag in AB.FAMILIES:
+        o = AB.summarize(fam, tag, "conclusion_only")
+        if o is None:
+            warn(f"benchmark: no conclusion_only cell for {fam}"); continue
+        if abs(o["headcount"]) < 1e-9 and abs(o["cw_vote"] - 1.0) < 1e-9 and abs(o["logpool"] - 1.0) < 1e-9:
+            ok(f"benchmark {fam}: round-0 verdicts head-count {o['headcount']:.2f} false / confidence-weighted {o['cw_vote']:.2f} true (sufficient info)")
+        else:
+            bad(f"benchmark {fam}: endpoints off (head {o['headcount']:.2f}, cw {o['cw_vote']:.2f}, log {o['logpool']:.2f})")
+        if abs(o["actual"] - EXP_ACTUAL[fam]) <= 0.01:
+            ok(f"benchmark {fam}: actual terminal {o['actual']:.2f} matches reported conclusion cell {EXP_ACTUAL[fam]:.2f}")
+        else:
+            bad(f"benchmark {fam}: actual terminal {o['actual']:.2f} != reported {EXP_ACTUAL[fam]:.2f}")
+except Exception as _e:
+    warn(f"benchmark check skipped: {_e}")
+
+try:
+    import analyze_recipient as AR
+    rows = []
+    for tag, topos in AR.SOURCES:
+        rows += AR.collect(tag, topos)
+    n = len(rows)
+    norm = sum(r["normative_capitulate"] for r in rows) / n
+    act = sum(r["actual_capitulate"] for r in rows) / n
+    lo = [r["actual_capitulate"] for r in rows if r["fan_in"] <= 3]
+    hi = [r["actual_capitulate"] for r in rows if r["fan_in"] >= 8]
+    lo_m, hi_m = sum(lo)/len(lo), sum(hi)/len(hi)
+    if n >= 1400 and norm < 0.01 and 0.25 <= act <= 0.29:
+        ok(f"recipient counterfactual: normative capitulation {norm:.3f} (~0) vs actual {act:.3f} over {n} agent-trials")
+    else:
+        bad(f"recipient counterfactual: norm {norm:.3f} / act {act:.3f} / n {n} (out of expected range)")
+    if hi_m - lo_m > 0.20:
+        ok(f"recipient counterfactual: excess capitulation rises with fan-in (low {lo_m:.2f} -> high {hi_m:.2f})")
+    else:
+        bad(f"recipient counterfactual: fan-in gradient weak (low {lo_m:.2f}, high {hi_m:.2f})")
+except Exception as _e:
+    warn(f"recipient check skipped: {_e}")
+
+# ---------- 12. REVISION-ERA QUANTITATIVE AUDIT ----------
+# Every quantity introduced or changed in the major revision is re-derived in
+# audit_revision.py and asserted against the value printed in the frozen manuscript and
+# Supplementary Materials. Reported values are assertion targets only; nothing reported is
+# used as an input.
+print("\n" + "="*70, "\n12. REVISION-ERA QUANTITATIVE CLAIMS (audit_revision.py)\n", "="*70)
+REV = []
+try:
+    import audit_revision as AREV
+    REV = AREV.run_all(verbose=True)
+    s_ = AREV.summary()
+    for r in REV:
+        if r["status"] == "FAIL":
+            bad(f"{r['family']} | {r['id']}: reproduced {r['reproduced']} != reported "
+                f"{r['expected']} (tol {r['tol']}){(' — ' + r['note']) if r['note'] else ''}")
+    ok(f"revision audit: {s_['passed']} of {s_['assertions']} reported quantities re-derived "
+       f"from archived data ({s_['info']} informational records)")
+    out = HERE / "audit_results.json"
+    out.write_text(json.dumps(dict(
+        manuscript="PNASNEXUS-2026-01296",
+        seed=AREV.SEED, bootstrap_draws=AREV.B_RESAMPLE,
+        summary=s_, results=REV), indent=2))
+    print(f"\n  structured results written to {out.name}")
+except Exception as _e:
+    bad(f"revision audit could not run: {type(_e).__name__}: {_e}")
 
 print("\n" + "="*70)
 print(f"AUDIT SUMMARY: {len(PASS)} pass, {len(WARN)} warn, {len(FAIL)} FAIL")

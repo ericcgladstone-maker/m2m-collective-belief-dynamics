@@ -91,15 +91,15 @@ axA.set_xticks(range(len(conts))); axA.set_xticklabels([c[2] for c in conts])
 axA.set_ylabel("terminal collective accuracy"); axA.set_ylim(0, 1.05)
 axA.axhline(0.5, ls=":", c="gray", lw=0.8); axA.legend(fontsize=8); axA.set_title("A  Content effect (misleading-majority, all-channel)")
 rounds = [0, 1, 2, 3]
-for ct, name, col in [("evidence_only", "evidence", EVID), ("conclusion_only", "conclusion", CONC)]:
+for ct, name, col in [("evidence_only", "evidence sharing", EVID), ("conclusion_only", "conclusion sharing", CONC)]:
     eb = round_traj("gpt-4.1-mini", "misleading_majority", "all_channel", ct, "e_bar")
     D = round_traj("gpt-4.1-mini", "misleading_majority", "all_channel", ct, "D")
     axB.plot(rounds[:len(eb)], eb, "-o", c=col, label=f"{name}: ē (error)")
     axB.plot(rounds[:len(D)], D, "--s", c=col, alpha=0.6, label=f"{name}: D (diversity)")
 axB.set_xlabel("communication round"); axB.set_ylabel("ē  /  D"); axB.set_xticks(rounds)
-axB.legend(fontsize=7); axB.set_title("B  Mechanism: individual error rises, diversity persists")
-plt.tight_layout(); plt.savefig(FIG / "fig2_content_mechanism.png", dpi=200); plt.close()
-print("wrote fig2")
+axB.legend(fontsize=7); axB.set_title("B  Individual error rises while diversity persists")
+plt.tight_layout(); plt.savefig(FIG / "fig2_content_diversity.png", dpi=600); plt.close()
+print("wrote fig2_content_diversity")
 
 # ---------- FIG 4: causal do-operator (with bootstrap CIs) ----------
 import random as _rng
@@ -125,9 +125,9 @@ for j, (tag, lab) in enumerate([("replay-gpt-4.1-mini", "gpt-4.1-mini"), ("repla
            color=[STRUCT, FAM2][j], label=f"{lab}  (ACE +{ace:.2f}, N={n_seeds})")
 ax.set_xticks(range(len(modes))); ax.set_xticklabels([m[1] for m in modes])
 ax.set_ylabel("terminal P(truth)"); ax.set_ylim(0, 1.05); ax.axhline(0.5, ls=":", c="gray", lw=0.8)
-ax.legend(fontsize=9); ax.set_title("A planted conclusion moves the collective\n(private evidence held fixed; bootstrap 95% CIs)")
-plt.tight_layout(); plt.savefig(FIG / "fig3_causal.png", dpi=200); plt.close()
-print("wrote fig causal (with CIs)")
+ax.legend(fontsize=9); ax.set_title("Planted conclusion intervention")
+plt.tight_layout(); plt.savefig(FIG / "fig4_planted_conclusion.png", dpi=600); plt.close()
+print("wrote fig4_planted_conclusion")
 
 # ---------- FIG 4: structure (heatmap + degree curve) ----------
 fig, (axA, axB) = plt.subplots(1, 2, figsize=(11, 4))
@@ -149,7 +149,7 @@ for i in range(len(topos)):
         val = M[i][k]
         txtc = "white" if (val != val or val < 0.72) else "black"  # contrast on cividis
         axA.text(k, i, f"{val:.2f}", ha="center", va="center", fontsize=8, color=txtc)
-axA.set_title("A  Topology × content (n=5, misleading)"); fig.colorbar(im, ax=axA, fraction=0.046)
+axA.set_title("A  Accuracy by topology and content (n=5)"); fig.colorbar(im, ax=axA, fraction=0.046)
 # degree curve (n=11, conclusion)
 deg = [("gpt-4.1-mini_n11", "circle", 2.0), ("gpt-4.1-mini_n11", "ring_shortcuts", 2.55),
        ("gpt-4.1-mini_degree", "lattice_k4", 4.0), ("gpt-4.1-mini_degree", "lattice_k6", 6.0),
@@ -169,17 +169,17 @@ cap_ys = [capit_by_cell(tag, "misleading_majority", tp, "conclusion_only") for t
 l2, = axB2.plot(xs, cap_ys, "-s", color=CONC, alpha=0.9, label="minority capitulation")
 axB2.set_ylabel("strong-minority capitulation", color=CONC); axB2.set_ylim(0, 1.05)
 axB2.tick_params(axis="y", labelcolor=CONC)
-axB.set_title("B  Fan-in scales accuracy loss and capitulation (n=11, conclusion)")
+axB.set_title("B  Fan-in, accuracy, and minority capitulation (n=11)")
 axB.legend(handles=[l1, l2], fontsize=8, loc="center right")
-plt.tight_layout(); plt.savefig(FIG / "fig4_structure.png", dpi=200); plt.close()
-print("wrote fig4 (with capitulation overlay)")
+plt.tight_layout(); plt.savefig(FIG / "fig5_fanin_topology.png", dpi=600); plt.close()
+print("wrote fig5_fanin_topology")
 
 # ---------- FIG 5: two failure modes (herding vs overload), n=11 ----------
 import numpy as np
 fig, (axA, axB) = plt.subplots(1, 2, figsize=(11, 4))
 # Panel A: regime x content, all-channel
-conds = [("conclusion_only", "conclusion-sharing\n(majority-deference)"),
-         ("evidence_only", "evidence-sharing\n(integration overload)")]
+conds = [("conclusion_only", "conclusion sharing"),
+         ("evidence_only", "evidence sharing")]
 regs = [("misleading_majority", "misleading majority", CONC),
         ("concordant", "concordant (control)", STRUCT)]
 xx = np.arange(len(conds)); wbar = 0.35
@@ -195,7 +195,7 @@ for j, (rg, lab, col) in enumerate(regs):
 axA.set_xticks(xx); axA.set_xticklabels([c[1] for c in conds])
 axA.set_ylabel("terminal collective accuracy (n=11, all-channel)"); axA.set_ylim(0, 1.05)
 axA.axhline(0.5, ls=":", c="gray", lw=0.8); axA.legend(fontsize=8)
-axA.set_title("A  Herding is regime-specific; overload is regime-general")
+axA.set_title("A  Accuracy by regime and communication content")
 # Panel B: concordant evidence-sharing accuracy vs per-node degree (overload isolation)
 odeg = [("gpt-4.1-mini_n11", "circle", 2.0), ("gpt-4.1-mini_n11", "ring_shortcuts", 2.55),
         ("gpt-4.1-mini_overload", "lattice_k4", 4.0), ("gpt-4.1-mini_overload", "lattice_k6", 6.0),
@@ -213,7 +213,7 @@ for tag, tp, dval in odeg:
 axB.errorbar(xs, ys, yerr=[los, his], fmt="-o", capsize=3, color=STRUCT)
 axB.set_xlabel("per-node degree (fan-in)"); axB.set_ylabel("terminal collective accuracy")
 axB.set_ylim(0, 1.05); axB.axhline(0.5, ls=":", c="gray", lw=0.8)
-axB.set_title("B  Concordant evidence-sharing degrades with fan-in\n(overload is regime-general, no misleading majority)")
-plt.tight_layout(); plt.savefig(FIG / "fig5_two_regimes.png", dpi=200); plt.close()
-print("wrote fig5")
+axB.set_title("B  Concordant evidence sharing by fan-in")
+plt.tight_layout(); plt.savefig(FIG / "fig6_two_failure_modes.png", dpi=600); plt.close()
+print("wrote fig6_two_failure_modes")
 print("figures ->", FIG)

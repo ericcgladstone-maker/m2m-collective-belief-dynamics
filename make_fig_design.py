@@ -47,9 +47,9 @@ aA.annotate("", xy=(0.74, 0.33), xytext=(0.70, 0.50), arrowprops=dict(arrowstyle
 panel_title(aB, "B   What each agent transmits (content)")
 rows = [
     ("none (baseline)", "— (no message)", GREY, ""),
-    ("evidence", "\"My reading occurs with prob. 0.59\nunder A, 0.41 under B.\"", EVID, "carries diagnosticity → re-weightable"),
-    ("conclusion", "\"My best guess is A, ~80% confident.\"", CONC, "verdict only → provenance hidden"),
-    ("both", "reading + diagnosticity  +  verdict", STRUCT, ""),
+    ("evidence", "\"My reading occurs with prob. 0.59\nunder A, 0.41 under B.\"", EVID, "diagnosticity shared"),
+    ("conclusion", "\"My best guess is A.\"", CONC, "verdict only"),
+    ("both", "\"Reading favors A (0.59 vs 0.41); guess A.\"", STRUCT, "evidence + verdict"),
 ]
 yb = 0.78
 for name, msg, col, tag in rows:
@@ -83,7 +83,7 @@ draw_graph(aC, 0.5, 0.62, 0.11, wheel, n, hub=True, label="wheel", deg="hub deg 
 allc = [(i, j) for i in range(n) for j in range(i+1, n)]
 draw_graph(aC, 0.84, 0.62, 0.11, allc, n, label="all-channel", deg="deg n−1")
 # degree ladder annotation
-aC.text(0.5, 0.30, "Degree ladder (n = 11):  circle (2) → ring+shortcuts (≈2.5)\n→ lattice 4 / 6 / 8 → all-channel (10)",
+aC.text(0.5, 0.30, "Degree ladder (n = 11):  circle (2) → lattice → all-channel (10)",
         ha="center", fontsize=8.5)
 aC.annotate("", xy=(0.86, 0.16), xytext=(0.14, 0.16), arrowprops=dict(arrowstyle="->", color=STRUCT, lw=2))
 aC.text(0.5, 0.10, "increasing per-node fan-in →", ha="center", fontsize=8.5, color=STRUCT, weight="bold")
@@ -98,7 +98,7 @@ for i in range(5):
 for k, (px, py) in enumerate(pos):
     col = CONC if k == 0 else STRUCT
     aD.add_patch(Circle((px, py), 0.026, fc=col, ec="black", lw=0.9, zorder=3))
-aD.text(pos[0][0], pos[0][1] + 0.10, "planted first-mover\n\"state is X (confident)\"",
+aD.text(pos[0][0], pos[0][1] + 0.10, "planted first-mover\nconfident verdict (correct/incorrect)",
         ha="center", fontsize=7.6, color=CONC, weight="bold")
 aD.text(0.30, 0.40, "private evidence held fixed", ha="center", fontsize=8, style="italic")
 rbox(aD, 0.60, 0.62, 0.36, 0.12, "do(plant correct)\n→ collective → truth", "#d8efe8", EVID, "black", 8.3)
@@ -109,6 +109,6 @@ aD.text(0.5, 0.22, "ACE = E[P(truth) | do(correct)] − E[P(truth) | do(wrong)]"
         ha="center", fontsize=8.2, weight="bold")
 
 plt.tight_layout(rect=[0, 0, 1, 0.98])
-plt.savefig(FIG / "fig1_design.png", dpi=200)
+plt.savefig(FIG / "fig1_design.png", dpi=600)
 plt.close()
 print("wrote fig1_design.png")

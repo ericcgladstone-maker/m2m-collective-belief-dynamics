@@ -13,12 +13,12 @@ ROOT = Path(__file__).parent.parent
 FIGDIR = ROOT / "figures"
 FIG_MAP = {  # caption-key -> png
     "Fig. 1": "fig1_design.png",
-    "Fig. 2": "fig2_content_mechanism.png",
-    "Fig. 3": "fig3_mechanism.png",
-    "Fig. 4": "fig3_causal.png",
-    "Fig. 5": "fig4_structure.png",
-    "Fig. 6": "fig5_two_regimes.png",
-    "Fig. S1": "figS1_validation.png",
+    "Fig. 2": "fig2_content_diversity.png",
+    "Fig. 3": "fig3_role_transitions.png",
+    "Fig. 4": "fig4_planted_conclusion.png",
+    "Fig. 5": "fig5_fanin_topology.png",
+    "Fig. 6": "fig6_two_failure_modes.png",
+    "Fig. S1": "figS1_readout_validation.png",
 }
 
 
@@ -31,11 +31,16 @@ def set_font(doc):
 
 
 def add_runs(p, text):
-    """Parse **bold** and _italic_ / *italic* into runs."""
-    for tok in re.split(r"(\*\*.+?\*\*|_.+?_|\*.+?\*)", text):
+    """Parse `code`, **bold**, and _italic_ / *italic* into runs.
+    Backtick code spans are matched first and rendered monospace, so underscores
+    inside code labels (e.g. evidence_only) are preserved and never read as italics."""
+    for tok in re.split(r"(`[^`]+`|\*\*.+?\*\*|_[^_]+_|\*[^*]+\*)", text):
         if not tok:
             continue
-        if tok.startswith("**") and tok.endswith("**"):
+        if tok.startswith("`") and tok.endswith("`"):
+            r = p.add_run(tok[1:-1]); r.font.name = "Courier New"
+            r._element.get_or_add_rPr().get_or_add_rFonts().set(qn("w:cs"), "Courier New")
+        elif tok.startswith("**") and tok.endswith("**"):
             r = p.add_run(tok[2:-2]); r.bold = True
         elif (tok.startswith("_") and tok.endswith("_")) or (tok.startswith("*") and tok.endswith("*")):
             r = p.add_run(tok[1:-1]); r.italic = True
@@ -71,8 +76,7 @@ def add_table(doc, rows):
     doc.add_paragraph()
 
 
-def render(md_path, docx_path):
-    doc = Document(); set_font(doc)
+def render_into(doc, md_path):
     lines = Path(md_path).read_text().splitlines()
     i = 0
     while i < len(lines):
@@ -115,10 +119,34 @@ def render(md_path, docx_path):
             p = doc.add_paragraph(style="List Bullet"); add_runs(p, ln.lstrip()[2:]); i += 1; continue
         # normal paragraph
         p = doc.add_paragraph(); add_runs(p, ln); i += 1
+
+
+def render(md_path, docx_path):
+    doc = Document(); set_font(doc)
+    render_into(doc, md_path)
+    doc.save(docx_path)
+    print(f"wrote {docx_path}")
+
+
+def render_merged(md_paths, docx_path):
+    """Render several markdown sources into one .docx, page-broken between sources.
+    Figures and tables are embedded inline at their captions/positions."""
+    from docx.enum.text import WD_BREAK
+    doc = Document(); set_font(doc)
+    for idx, md in enumerate(md_paths):
+        if idx:
+            doc.add_paragraph().add_run().add_break(WD_BREAK.PAGE)
+        render_into(doc, md)
     doc.save(docx_path)
     print(f"wrote {docx_path}")
 
 
 if __name__ == "__main__":
-    render(ROOT / "Manuscript Draft v5.md", ROOT / "M2M_Collective_Belief_Dynamics_Manuscript.docx")
-    render(ROOT / "Supplementary Materials.md", ROOT / "M2M_Collective_Belief_Dynamics_Supplementary.docx")
+    # Submission files (PNAS Nexus uploads the main manuscript and the SI as SEPARATE files):
+    render(ROOT / "Manuscript Draft v5.md", ROOT / "M2M_Manuscript.docx")
+    render(ROOT / "Supplementary Materials.md", ROOT / "M2M_Supplementary_Information.docx")
+    # Merged reading/circulation copy (NOT a submission artifact):
+    render_merged(
+        [ROOT / "Manuscript Draft v5.md", ROOT / "Supplementary Materials.md"],
+        ROOT / "M2M_Collective_Belief_Dynamics_Manuscript_with_SI.docx",
+    )

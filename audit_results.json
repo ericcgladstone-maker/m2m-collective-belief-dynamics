@@ -1,0 +1,3914 @@
+{
+  "manuscript": "PNASNEXUS-2026-01296",
+  "seed": 20260909,
+  "bootstrap_draws": 10000,
+  "summary": {
+    "total": 390,
+    "passed": 367,
+    "failed": 0,
+    "info": 23,
+    "assertions": 367
+  },
+  "results": [
+    {
+      "id": "A.gpt-4.1-mini.base.mean",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.632187,
+      "expected": 0.632,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.base.sd",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.014575,
+      "expected": 0.015,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.base.brier",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.135499,
+      "expected": 0.1355,
+      "tol": 6e-05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.evid.mean",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.804536,
+      "expected": 0.805,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.evid.sd",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.224579,
+      "expected": 0.225,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.evid.brier",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.088642,
+      "expected": 0.0886,
+      "tol": 6e-05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.concl.mean",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.642966,
+      "expected": 0.643,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.concl.sd",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.380569,
+      "expected": 0.381,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.concl.brier",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.272306,
+      "expected": 0.2723,
+      "tol": 6e-05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.concl.wrongrate",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.36,
+      "expected": 0.36,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.acc.nocomm",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "N=100"
+    },
+    {
+      "id": "A.gpt-4.1-mini.acc.evid",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.9,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "N=100"
+    },
+    {
+      "id": "A.gpt-4.1-mini.acc.concl",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.64,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "N=100"
+    },
+    {
+      "id": "A.gpt-4.1-mini.acc.both",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.81,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "N=100"
+    },
+    {
+      "id": "A.gpt-4.1-mini.rd_evid_minus_concl",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.26,
+      "expected": 0.26,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.gpt-4.1-mini.mcnemar_chi2",
+      "family": "A primary content",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 15.625,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "discordant 33/7, N=100"
+    },
+    {
+      "id": "A.claude-sonnet-4-6.base.mean",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.633666,
+      "expected": 0.634,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.base.sd",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.014646,
+      "expected": 0.015,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.base.brier",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.134415,
+      "expected": 0.1344,
+      "tol": 6e-05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.evid.mean",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.89844,
+      "expected": 0.898,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.evid.sd",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.158232,
+      "expected": 0.158,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.evid.brier",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.035352,
+      "expected": 0.0354,
+      "tol": 6e-05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.concl.mean",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.659152,
+      "expected": 0.659,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.concl.sd",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.393224,
+      "expected": 0.393,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.concl.brier",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.270803,
+      "expected": 0.2708,
+      "tol": 6e-05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.concl.wrongrate",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.38,
+      "expected": 0.38,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.acc.nocomm",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 1.0,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "N=50"
+    },
+    {
+      "id": "A.claude-sonnet-4-6.acc.evid",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.96,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "N=50"
+    },
+    {
+      "id": "A.claude-sonnet-4-6.acc.concl",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.62,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "N=50"
+    },
+    {
+      "id": "A.claude-sonnet-4-6.acc.both",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.88,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "N=50"
+    },
+    {
+      "id": "A.claude-sonnet-4-6.rd_evid_minus_concl",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.34,
+      "expected": 0.34,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "A.claude-sonnet-4-6.mcnemar_chi2",
+      "family": "A primary content",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 12.190476,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "discordant 19/2, N=50"
+    },
+    {
+      "id": "B.gpt-4.1-mini.log.wrongrate",
+      "family": "B pooling sensitivity",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.36,
+      "expected": 0.36,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "B.gpt-4.1-mini.log.wrongmean",
+      "family": "B pooling sensitivity",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.164725,
+      "expected": 0.165,
+      "tol": 0.001,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "B.gpt-4.1-mini.arith.wrongrate",
+      "family": "B pooling sensitivity",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.31,
+      "expected": 0.31,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "B.gpt-4.1-mini.arith.wrongmean",
+      "family": "B pooling sensitivity",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.315977,
+      "expected": 0.316,
+      "tol": 0.001,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "B.claude-sonnet-4-6.log.wrongrate",
+      "family": "B pooling sensitivity",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.38,
+      "expected": 0.38,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "B.claude-sonnet-4-6.log.wrongmean",
+      "family": "B pooling sensitivity",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.171216,
+      "expected": 0.171,
+      "tol": 0.001,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "B.claude-sonnet-4-6.arith.wrongrate",
+      "family": "B pooling sensitivity",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.26,
+      "expected": 0.26,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "B.claude-sonnet-4-6.arith.wrongmean",
+      "family": "B pooling sensitivity",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.333638,
+      "expected": 0.334,
+      "tol": 0.001,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "C.gpt-4.1-mini.evidence_only.toward_frac",
+      "family": "C directional movement",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.11,
+      "expected": 0.11,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "C.gpt-4.1-mini.evidence_only.toward_mean_mag",
+      "family": "C directional movement",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": -0.399418,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "mean signed movement among majority-ward trials"
+    },
+    {
+      "id": "C.gpt-4.1-mini.conclusion_only.toward_frac",
+      "family": "C directional movement",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.39,
+      "expected": 0.39,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "C.gpt-4.1-mini.conclusion_only.toward_mean_mag",
+      "family": "C directional movement",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": -0.440238,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "mean signed movement among majority-ward trials"
+    },
+    {
+      "id": "C.claude-sonnet-4-6.evidence_only.toward_frac",
+      "family": "C directional movement",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.04,
+      "expected": 0.04,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "C.claude-sonnet-4-6.evidence_only.toward_mean_mag",
+      "family": "C directional movement",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": -0.44515,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "mean signed movement among majority-ward trials"
+    },
+    {
+      "id": "C.claude-sonnet-4-6.conclusion_only.toward_frac",
+      "family": "C directional movement",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.38,
+      "expected": 0.38,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "C.claude-sonnet-4-6.conclusion_only.toward_mean_mag",
+      "family": "C directional movement",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": -0.461374,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "mean signed movement among majority-ward trials"
+    },
+    {
+      "id": "D.gpt-4.1-mini.D.r0",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.046885,
+      "expected": 0.047,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.gpt-4.1-mini.ebar.r0",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.209645,
+      "expected": 0.21,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.gpt-4.1-mini.D.r3",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.091194,
+      "expected": 0.091,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.gpt-4.1-mini.ebar.r3",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.28816,
+      "expected": 0.288,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.claude-sonnet-4-6.D.r0",
+      "family": "D error and diversity",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.047538,
+      "expected": 0.048,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.claude-sonnet-4-6.ebar.r0",
+      "family": "D error and diversity",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.2097,
+      "expected": 0.21,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.claude-sonnet-4-6.D.r3",
+      "family": "D error and diversity",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.092822,
+      "expected": 0.093,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.claude-sonnet-4-6.ebar.r3",
+      "family": "D error and diversity",
+      "source": "data/claude-sonnet-4-6/rounds.csv",
+      "reproduced": 0.255248,
+      "expected": 0.255,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.concordant.deg2.0.D.r0",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.006738,
+      "expected": 0.007,
+      "tol": 0.0015,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.concordant.deg2.0.D.term",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.002286,
+      "expected": 0.002,
+      "tol": 0.002,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.concordant.deg2.0.ebar.term",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.005058,
+      "expected": 0.005,
+      "tol": 0.002,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.concordant.deg8.0.D.r0",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini_overload/rounds.csv",
+      "reproduced": 0.0065,
+      "expected": 0.006,
+      "tol": 0.0015,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.concordant.deg8.0.D.term",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini_overload/rounds.csv",
+      "reproduced": 0.128217,
+      "expected": 0.128,
+      "tol": 0.002,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "D.concordant.deg8.0.ebar.term",
+      "family": "D error and diversity",
+      "source": "data/gpt-4.1-mini_overload/rounds.csv",
+      "reproduced": 0.31379,
+      "expected": 0.314,
+      "tol": 0.002,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.1.evid",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.13,
+      "expected": 0.13,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.1.concl",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.4,
+      "expected": 0.4,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.1.diff",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.27,
+      "expected": 0.27,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.2.evid",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.37,
+      "expected": 0.37,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.2.concl",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.54,
+      "expected": 0.54,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.2.diff",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.17,
+      "expected": 0.17,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.2.ci_lo",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.03,
+      "expected": 0.03,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.2.ci_hi",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.31,
+      "expected": 0.31,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.25.evid",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.41,
+      "expected": 0.41,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.25.concl",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.57,
+      "expected": 0.57,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.t0.25.diff",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.16,
+      "expected": 0.16,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.split.correct",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.46875,
+      "expected": 0.47,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.gpt-4.1-mini.split.incorrect",
+      "family": "E both-extremes",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.666667,
+      "expected": 0.67,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.1.evid",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.08,
+      "expected": 0.08,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.1.concl",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.44,
+      "expected": 0.44,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.1.diff",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.36,
+      "expected": 0.36,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.2.evid",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.18,
+      "expected": 0.18,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.2.concl",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.52,
+      "expected": 0.52,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.2.diff",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.34,
+      "expected": 0.34,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.2.ci_lo",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.18,
+      "expected": 0.18,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.2.ci_hi",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.5,
+      "expected": 0.5,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.25.evid",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.22,
+      "expected": 0.22,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.25.concl",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.52,
+      "expected": 0.52,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.t0.25.diff",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.3,
+      "expected": 0.3,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.split.correct",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.387097,
+      "expected": 0.39,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "E.claude-sonnet-4-6.split.incorrect",
+      "family": "E both-extremes",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.736842,
+      "expected": 0.74,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gpt-4.1-mini.log.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.26,
+      "expected": 0.26,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gpt-4.1-mini.arith.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.26,
+      "expected": 0.26,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gpt-4.1-mini.major.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.28,
+      "expected": 0.28,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gpt-4.1-mini.median.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.28,
+      "expected": 0.28,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gpt-4.1-mini.clip05.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.26,
+      "expected": 0.26,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gpt-4.1-mini.dropmax.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gpt-4.1-mini/beliefs.csv",
+      "reproduced": 0.28,
+      "expected": 0.28,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.claude-sonnet-4-6.log.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.34,
+      "expected": 0.34,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.claude-sonnet-4-6.arith.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.24,
+      "expected": 0.24,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.claude-sonnet-4-6.major.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.2,
+      "expected": 0.2,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.claude-sonnet-4-6.median.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.2,
+      "expected": 0.2,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.claude-sonnet-4-6.clip05.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.22,
+      "expected": 0.22,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.claude-sonnet-4-6.dropmax.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/claude-sonnet-4-6/beliefs.csv",
+      "reproduced": 0.26,
+      "expected": 0.26,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gemini-2.5-flash.log.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gemini-2.5-flash/beliefs.csv",
+      "reproduced": 0.033333,
+      "expected": 0.03,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gemini-2.5-flash.arith.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gemini-2.5-flash/beliefs.csv",
+      "reproduced": 0.066667,
+      "expected": 0.07,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gemini-2.5-flash.major.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gemini-2.5-flash/beliefs.csv",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gemini-2.5-flash.median.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gemini-2.5-flash/beliefs.csv",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gemini-2.5-flash.clip05.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gemini-2.5-flash/beliefs.csv",
+      "reproduced": 0.066667,
+      "expected": 0.07,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "F.gemini-2.5-flash.dropmax.evid_minus_concl",
+      "family": "F aggregation robustness",
+      "source": "data/gemini-2.5-flash/beliefs.csv",
+      "reproduced": 0.033333,
+      "expected": 0.03,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.deg10.concordant.evid.log",
+      "family": "F aggregation robustness",
+      "source": "data/gpt-4.1-mini_n11/beliefs.csv",
+      "reproduced": 0.68,
+      "expected": 0.68,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.deg10.concordant.evid.alt_min",
+      "family": "F aggregation robustness",
+      "source": "data/gpt-4.1-mini_n11/beliefs.csv",
+      "reproduced": 0.5,
+      "expected": 0.5,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.deg10.concordant.evid.alt_max",
+      "family": "F aggregation robustness",
+      "source": "data/gpt-4.1-mini_n11/beliefs.csv",
+      "reproduced": 0.64,
+      "expected": 0.64,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.evidence_total",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 32520,
+      "expected": 32520,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.evidence_verdict_leaks",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 0,
+      "expected": 0,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.conclusion_total",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 40335,
+      "expected": 40335,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.conclusion_substantive",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 145,
+      "expected": 145,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.conclusion_rate",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 0.003595,
+      "expected": 0.0036,
+      "tol": 0.0002,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.focal.gpt.total",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 1500,
+      "expected": 1500,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.focal.gpt.leaks",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 0,
+      "expected": 0,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.focal.claude.total",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 750,
+      "expected": 750,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.focal.claude.leaks",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 141,
+      "expected": 141,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.focal.claude.rate",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 0.188,
+      "expected": 0.188,
+      "tol": 0.001,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G.focal.claude.round1_rate",
+      "family": "G channel purity",
+      "source": "data/claude-sonnet-4-6/messages.csv",
+      "reproduced": 0.556,
+      "expected": 0.556,
+      "tol": 0.01,
+      "status": "PASS",
+      "note": "disclosure concentrated in round 1"
+    },
+    {
+      "id": "H.replay-gpt-4.1-mini.n_matched",
+      "family": "H planted conclusion",
+      "source": "data/replay-gpt-4.1-mini/replay.csv",
+      "reproduced": 40,
+      "expected": 40,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "H.replay-gpt-4.1-mini.correct_mean",
+      "family": "H planted conclusion",
+      "source": "data/replay-gpt-4.1-mini/replay.csv",
+      "reproduced": 0.847117,
+      "expected": 0.85,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "H.replay-gpt-4.1-mini.wrong_mean",
+      "family": "H planted conclusion",
+      "source": "data/replay-gpt-4.1-mini/replay.csv",
+      "reproduced": 0.33915,
+      "expected": 0.34,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "H.replay-gpt-4.1-mini.plant_effect",
+      "family": "H planted conclusion",
+      "source": "data/replay-gpt-4.1-mini/replay.csv",
+      "reproduced": 0.507967,
+      "expected": 0.51,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "H.replay-gpt-4.1-mini.meta_consistency",
+      "family": "H planted conclusion",
+      "source": "data/replay-gpt-4.1-mini/run_meta.json",
+      "reproduced": 0.507967,
+      "expected": 0.508,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "replay.csv vs archived run_meta"
+    },
+    {
+      "id": "H.replay-claude-sonnet-4-6.n_matched",
+      "family": "H planted conclusion",
+      "source": "data/replay-claude-sonnet-4-6/replay.csv",
+      "reproduced": 15,
+      "expected": 15,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "H.replay-claude-sonnet-4-6.correct_mean",
+      "family": "H planted conclusion",
+      "source": "data/replay-claude-sonnet-4-6/replay.csv",
+      "reproduced": 0.993907,
+      "expected": 0.99,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "H.replay-claude-sonnet-4-6.wrong_mean",
+      "family": "H planted conclusion",
+      "source": "data/replay-claude-sonnet-4-6/replay.csv",
+      "reproduced": 0.35514,
+      "expected": 0.36,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "H.replay-claude-sonnet-4-6.plant_effect",
+      "family": "H planted conclusion",
+      "source": "data/replay-claude-sonnet-4-6/replay.csv",
+      "reproduced": 0.638767,
+      "expected": 0.64,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "H.replay-claude-sonnet-4-6.meta_consistency",
+      "family": "H planted conclusion",
+      "source": "data/replay-claude-sonnet-4-6/run_meta.json",
+      "reproduced": 0.638767,
+      "expected": 0.6388,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "replay.csv vs archived run_meta"
+    },
+    {
+      "id": "I.ladder.deg2.0",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "N=50"
+    },
+    {
+      "id": "I.ladder.deg2.55",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.94,
+      "expected": 0.94,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "N=50"
+    },
+    {
+      "id": "I.ladder.deg4.0",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_degree/rounds.csv",
+      "reproduced": 0.9,
+      "expected": 0.9,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "N=50"
+    },
+    {
+      "id": "I.ladder.deg6.0",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_degree/rounds.csv",
+      "reproduced": 0.76,
+      "expected": 0.76,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "N=50"
+    },
+    {
+      "id": "I.ladder.deg8.0",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_degree/rounds.csv",
+      "reproduced": 0.6,
+      "expected": 0.6,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "N=50"
+    },
+    {
+      "id": "I.ladder.deg10.0",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.58,
+      "expected": 0.58,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "N=50"
+    },
+    {
+      "id": "I.contrast.allchannel_minus_k8.rd",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv + data/gpt-4.1-mini_degree/rounds.csv",
+      "reproduced": -0.02,
+      "expected": -0.02,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I.contrast.allchannel_minus_k8.ci_lo",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv + data/gpt-4.1-mini_degree/rounds.csv",
+      "reproduced": -0.14,
+      "expected": -0.14,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I.contrast.allchannel_minus_k8.ci_hi",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv + data/gpt-4.1-mini_degree/rounds.csv",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I.contrast.ringshortcuts_minus_circle.rd",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv + data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.06,
+      "expected": -0.06,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I.contrast.ringshortcuts_minus_circle.ci_lo",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv + data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.14,
+      "expected": -0.14,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I.contrast.ringshortcuts_minus_circle.ci_hi",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv + data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I.contrast.allchannel_minus_ringshortcuts.rd",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv + data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.36,
+      "expected": -0.36,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I.contrast.allchannel_minus_ringshortcuts.ci_lo",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv + data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.52,
+      "expected": -0.52,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I.contrast.allchannel_minus_ringshortcuts.ci_hi",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv + data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.2,
+      "expected": -0.2,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I.degree_logit.slope",
+      "family": "I fan-in and topology",
+      "source": "data/*_n11,_degree/rounds.csv",
+      "reproduced": -0.3737,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "seed-clustered logistic slope, z=-6.66"
+    },
+    {
+      "id": "I.degree_logit.log10p",
+      "family": "I fan-in and topology",
+      "source": "data/*_n11,_degree/rounds.csv",
+      "reproduced": -10.558378,
+      "expected": -10.327902142064282,
+      "tol": 1.5,
+      "status": "PASS",
+      "note": "reported p = 4.7e-11; reproduced p = 2.76e-11"
+    },
+    {
+      "id": "J.n_agents",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 600,
+      "expected": 600,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.n_trials",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 300,
+      "expected": 300,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.own_fanin.r",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.356937,
+      "expected": 0.357,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.own_fanin.ci_lo",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.256835,
+      "expected": 0.257,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.own_fanin.ci_hi",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.449619,
+      "expected": 0.45,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.neighbour_given_own.r",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.007181,
+      "expected": 0.007,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.neighbour_given_own.ci_lo",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": -0.055876,
+      "expected": -0.056,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.neighbour_given_own.ci_hi",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.074893,
+      "expected": 0.075,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.own_given_neighbour.r",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.264759,
+      "expected": 0.265,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.own_given_neighbour.ci_lo",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.17233,
+      "expected": 0.172,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.own_given_neighbour.ci_hi",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.35648,
+      "expected": 0.356,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.wheel_hub_minus_spoke.rd",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.438811,
+      "expected": 0.439,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.wheel_hub_minus_spoke.ci_lo",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.288308,
+      "expected": 0.288,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J.wheel_hub_minus_spoke.ci_hi",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.589965,
+      "expected": 0.59,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.misleading_majority.deg2.0",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "evidence minus conclusion, 50 paired seeds"
+    },
+    {
+      "id": "K.rd.misleading_majority.deg2.0.ci_lo",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.misleading_majority.deg2.0.ci_hi",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.misleading_majority.deg2.55",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.06,
+      "expected": 0.06,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "evidence minus conclusion, 50 paired seeds"
+    },
+    {
+      "id": "K.rd.misleading_majority.deg2.55.ci_lo",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.misleading_majority.deg2.55.ci_hi",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.14,
+      "expected": 0.14,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.misleading_majority.deg10.0",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.2,
+      "expected": -0.2,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "evidence minus conclusion, 50 paired seeds"
+    },
+    {
+      "id": "K.rd.misleading_majority.deg10.0.ci_lo",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.32,
+      "expected": -0.32,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.misleading_majority.deg10.0.ci_hi",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.08,
+      "expected": -0.08,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.interaction.misleading_majority.stat",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.23,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "RD(deg10) - mean(RD deg2, RD deg2.55); within-seed content permutation"
+    },
+    {
+      "id": "K.interaction.misleading_majority.p",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0011,
+      "expected": 0.0015,
+      "tol": 0.0015,
+      "status": "PASS",
+      "note": "10000 within-seed permutations, two-sided"
+    },
+    {
+      "id": "K.rd.concordant.deg2.0",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "evidence minus conclusion, 50 paired seeds"
+    },
+    {
+      "id": "K.rd.concordant.deg2.0.ci_lo",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.concordant.deg2.0.ci_hi",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.concordant.deg2.55",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "evidence minus conclusion, 50 paired seeds"
+    },
+    {
+      "id": "K.rd.concordant.deg2.55.ci_lo",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.concordant.deg2.55.ci_hi",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.concordant.deg10.0",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.28,
+      "expected": -0.28,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "evidence minus conclusion, 50 paired seeds"
+    },
+    {
+      "id": "K.rd.concordant.deg10.0.ci_lo",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.42,
+      "expected": -0.42,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.rd.concordant.deg10.0.ci_hi",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.14,
+      "expected": -0.14,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "K.interaction.concordant.stat",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": -0.28,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "RD(deg10) - mean(RD deg2, RD deg2.55); within-seed content permutation"
+    },
+    {
+      "id": "K.interaction.concordant.p",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.0021,
+      "expected": 0.0014,
+      "tol": 0.0015,
+      "status": "PASS",
+      "note": "10000 within-seed permutations, two-sided"
+    },
+    {
+      "id": "K.design.paired_levels",
+      "family": "K content x fan-in",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 3,
+      "expected": 3,
+      "tol": 0,
+      "status": "PASS",
+      "note": "content contrast exists only at degrees 2, 2.55, 10"
+    },
+    {
+      "id": "L.concordant_ladder.deg2.0",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg2.0.n",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg2.55",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg2.55.n",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg4.0",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_overload/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg4.0.n",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_overload/rounds.csv",
+      "reproduced": 30,
+      "expected": 30,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg6.0",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_overload/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg6.0.n",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_overload/rounds.csv",
+      "reproduced": 30,
+      "expected": 30,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg8.0",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_overload/rounds.csv",
+      "reproduced": 0.9,
+      "expected": 0.9,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg8.0.n",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_overload/rounds.csv",
+      "reproduced": 30,
+      "expected": 30,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg10.0",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 0.68,
+      "expected": 0.68,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "L.concordant_ladder.deg10.0.n",
+      "family": "L concordant degree ladder",
+      "source": "data/gpt-4.1-mini_n11/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.circle.conclusion_only.senders",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 2.0,
+      "expected": 2.0,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.circle.conclusion_only.chars",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 141.089697,
+      "expected": 141,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.circle.conclusion_only.chars_per_sender",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 70.544848,
+      "expected": 71,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.circle.evidence_only.senders",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 2.0,
+      "expected": 2.0,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.circle.evidence_only.chars",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 240.941818,
+      "expected": 241,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.circle.evidence_only.chars_per_sender",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 120.470909,
+      "expected": 120,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.ring_shortcuts.conclusion_only.senders",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 2.545455,
+      "expected": 2.5,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.ring_shortcuts.conclusion_only.chars",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 170.882424,
+      "expected": 171,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.ring_shortcuts.conclusion_only.chars_per_sender",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 67.132381,
+      "expected": 67,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.ring_shortcuts.evidence_only.senders",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 2.545455,
+      "expected": 2.5,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.ring_shortcuts.evidence_only.chars",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 305.036364,
+      "expected": 305,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.ring_shortcuts.evidence_only.chars_per_sender",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 119.835714,
+      "expected": 120,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.all_channel.conclusion_only.senders",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 10.0,
+      "expected": 10.0,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.all_channel.conclusion_only.chars",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 652.921212,
+      "expected": 653,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.all_channel.conclusion_only.chars_per_sender",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 65.292121,
+      "expected": 65,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.all_channel.evidence_only.senders",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 10.0,
+      "expected": 10.0,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.all_channel.evidence_only.chars",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 1187.872727,
+      "expected": 1188,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.all_channel.evidence_only.chars_per_sender",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 118.787273,
+      "expected": 119,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.concordant.all_channel.evidence_only.chars",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 1185.066667,
+      "expected": 1185,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.concordant.all_channel.conclusion_only.chars",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 650.072727,
+      "expected": 650,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.degree10.evidence_conclusion_ratio",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 1.822976,
+      "expected": 1.82,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.cv.min",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 0.022818,
+      "expected": 0.02,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "M.cv.max",
+      "family": "M message load",
+      "source": "data/gpt-4.1-mini_n11/full/transcripts.jsonl",
+      "reproduced": 0.245509,
+      "expected": 0.25,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.off.n",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.off.accuracy",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 0.62,
+      "expected": 0.62,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.off.ci_lo",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 0.481502,
+      "expected": 0.48,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.off.ci_hi",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 0.741374,
+      "expected": 0.74,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.on.n",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 30,
+      "expected": 30,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.on.accuracy",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.on.ci_lo",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 0.886483,
+      "expected": 0.89,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.on.ci_hi",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.on.e_bar_min",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 0.00396,
+      "expected": 0.004,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": "minimum of the round-mean trajectory [0.2097, 0.004, 0.004, 0.0244]"
+    },
+    {
+      "id": "N.on.e_bar_terminal",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 0.024357,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "terminal-round mean individual error"
+    },
+    {
+      "id": "N.z",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": 3.866629,
+      "expected": 3.87,
+      "tol": 0.02,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "N.log10p",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6{,_think}/rounds.csv",
+      "reproduced": -3.957227,
+      "expected": -3.958607314841775,
+      "tol": 0.06,
+      "status": "PASS",
+      "note": "reproduced p = 1.10e-04"
+    },
+    {
+      "id": "N.tokens_out.off",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6/full/transcripts.jsonl",
+      "reproduced": 5706.74,
+      "expected": 5707,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": "mean completion tokens per trial, focal cell"
+    },
+    {
+      "id": "N.tokens_out.on",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6_think/full/transcripts.jsonl",
+      "reproduced": 25917.4,
+      "expected": 25917,
+      "tol": 1.0,
+      "status": "PASS",
+      "note": "mean completion tokens per trial, focal cell"
+    },
+    {
+      "id": "N.tokens_out.ratio",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6*/full/transcripts.jsonl",
+      "reproduced": 4.541542,
+      "expected": 4.5,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": "approximately 4.5-fold"
+    },
+    {
+      "id": "N.cost.ratio",
+      "family": "N reasoning effort",
+      "source": "data/claude-sonnet-4-6*/full/transcripts.jsonl",
+      "reproduced": 3.349362,
+      "expected": 3.3,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": "$0.1280 -> $0.4287 per trial at $3/$15 per Mtok"
+    },
+    {
+      "id": "O.claude-sonnet-4-6.concordant.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.claude-sonnet-4-6.concordant.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.claude-sonnet-4-6.misleading_majority.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 0.833,
+      "expected": 0.83,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.claude-sonnet-4-6.misleading_majority.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gpt-4.1-mini.concordant.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gpt-4.1-mini.concordant.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gpt-4.1-mini.misleading_majority.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 0.833,
+      "expected": 0.83,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gpt-4.1-mini.misleading_majority.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gemini-2.5-flash.concordant.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 0.92,
+      "expected": 0.92,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gemini-2.5-flash.concordant.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gemini-2.5-flash.misleading_majority.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gemini-2.5-flash.misleading_majority.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gemini-2.5-pro.concordant.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gemini-2.5-pro.concordant.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gemini-2.5-pro.misleading_majority.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gemini-2.5-pro.misleading_majority.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.claude-haiku-4-5.concordant.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 0.75,
+      "expected": 0.75,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.claude-haiku-4-5.concordant.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.claude-haiku-4-5.misleading_majority.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 0.5,
+      "expected": 0.5,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.claude-haiku-4-5.misleading_majority.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gpt-4o-mini.concordant.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 0.833,
+      "expected": 0.83,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gpt-4o-mini.concordant.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gpt-4o-mini.misleading_majority.truth_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 0.5,
+      "expected": 0.5,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.gpt-4o-mini.misleading_majority.n",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 12,
+      "expected": 12,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "O.admitted.min_mm_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 0.83,
+      "expected": 0.83,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "admitted models reached at least 0.83 under misleading majority"
+    },
+    {
+      "id": "O.excluded.max_mm_acc",
+      "family": "O capability screening",
+      "source": "data/adequacy/adequacy.csv",
+      "reproduced": 0.5,
+      "expected": 0.5,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.n_cells",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 10,
+      "expected": 10,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.evidence_only.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.evidence_only.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.concordant.all_channel.evidence_only.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.005878,
+      "expected": 0.006,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.evidence_only.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.000572,
+      "expected": 0.001,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.evidence_only.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.968958,
+      "expected": 0.969,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.conclusion_only.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.conclusion_only.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.concordant.all_channel.conclusion_only.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.015024,
+      "expected": 0.015,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.conclusion_only.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.001136,
+      "expected": 0.001,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.conclusion_only.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.940518,
+      "expected": 0.941,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.both.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.both.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.concordant.all_channel.both.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.009554,
+      "expected": 0.01,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.both.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.000574,
+      "expected": 0.001,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.all_channel.both.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.962944,
+      "expected": 0.963,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.circle.evidence_only.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.circle.evidence_only.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.concordant.circle.evidence_only.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.023422,
+      "expected": 0.023,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.circle.evidence_only.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.007534,
+      "expected": 0.008,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.circle.evidence_only.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.945706,
+      "expected": 0.946,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.circle.conclusion_only.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.circle.conclusion_only.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.concordant.circle.conclusion_only.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.03132,
+      "expected": 0.031,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.circle.conclusion_only.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.008076,
+      "expected": 0.008,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.concordant.circle.conclusion_only.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.909244,
+      "expected": 0.909,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.evidence_only.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.evidence_only.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.misleading_majority.all_channel.evidence_only.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.01303,
+      "expected": 0.013,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.evidence_only.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.002964,
+      "expected": 0.003,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.evidence_only.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.942748,
+      "expected": 0.943,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.conclusion_only.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.conclusion_only.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.misleading_majority.all_channel.conclusion_only.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.007042,
+      "expected": 0.007,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.conclusion_only.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.00165,
+      "expected": 0.002,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.conclusion_only.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.957768,
+      "expected": 0.958,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.both.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.both.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.misleading_majority.all_channel.both.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.004102,
+      "expected": 0.004,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.both.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.000932,
+      "expected": 0.001,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.all_channel.both.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.970398,
+      "expected": 0.97,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.circle.evidence_only.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.circle.evidence_only.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.misleading_majority.circle.evidence_only.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.08134,
+      "expected": 0.081,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.circle.evidence_only.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.039916,
+      "expected": 0.04,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.circle.evidence_only.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.89694,
+      "expected": 0.897,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.circle.conclusion_only.n",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.circle.conclusion_only.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "ceiling; probe has no sensitivity to a content effect"
+    },
+    {
+      "id": "P.misleading_majority.circle.conclusion_only.e_bar",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.047434,
+      "expected": 0.047,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.circle.conclusion_only.D",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.019588,
+      "expected": 0.02,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.misleading_majority.circle.conclusion_only.p_truth",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.896232,
+      "expected": 0.896,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.baseline.concordant.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.92,
+      "expected": 0.92,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "no-communication control; only the concordant control is below ceiling"
+    },
+    {
+      "id": "P.baseline.misleading_majority.accuracy",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "no-communication control; only the concordant control is below ceiling"
+    },
+    {
+      "id": "P.round0_e_bar.min",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.12805,
+      "expected": 0.128,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.round0_e_bar.max",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.20785,
+      "expected": 0.208,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P.mm_allchannel_conclusion.e_bar_round0",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.12805,
+      "expected": 0.128,
+      "tol": 0.0006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.none.n",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.none.accuracy",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.none.ci_lo",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.92865,
+      "expected": 0.93,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.none.ci_hi",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.evidence_only.n",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.evidence_only.accuracy",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.82,
+      "expected": 0.82,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.evidence_only.ci_lo",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.692037,
+      "expected": 0.69,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.evidence_only.ci_hi",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.902299,
+      "expected": 0.9,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.conclusion_only.n",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.conclusion_only.accuracy",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.54,
+      "expected": 0.54,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.conclusion_only.ci_lo",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.403986,
+      "expected": 0.4,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_narrow.conclusion_only.ci_hi",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.670306,
+      "expected": 0.67,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.none.n",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.none.accuracy",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.none.ci_lo",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.92865,
+      "expected": 0.93,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.none.ci_hi",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.evidence_only.n",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.evidence_only.accuracy",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.84,
+      "expected": 0.84,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.evidence_only.ci_lo",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.714855,
+      "expected": 0.71,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.evidence_only.ci_hi",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.916627,
+      "expected": 0.92,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.conclusion_only.n",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.conclusion_only.accuracy",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.42,
+      "expected": 0.42,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.conclusion_only.ci_lo",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.293748,
+      "expected": 0.29,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_gap_wide.conclusion_only.ci_hi",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.557668,
+      "expected": 0.56,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.none.n",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.none.accuracy",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.none.ci_lo",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.92865,
+      "expected": 0.93,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.none.ci_hi",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.evidence_only.n",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.evidence_only.accuracy",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.82,
+      "expected": 0.82,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.evidence_only.ci_lo",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.692037,
+      "expected": 0.69,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.evidence_only.ci_hi",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.902299,
+      "expected": 0.9,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.conclusion_only.n",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.conclusion_only.accuracy",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.26,
+      "expected": 0.26,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.conclusion_only.ci_lo",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.158714,
+      "expected": 0.16,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "Q.mm_maj_heavy.conclusion_only.ci_hi",
+      "family": "Q signal structure",
+      "source": "data/gpt-4.1-mini_sigsweep/rounds.csv",
+      "reproduced": 0.395534,
+      "expected": 0.4,
+      "tol": 0.011,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "R.duplicate_trial_keys",
+      "family": "R dataset integrity",
+      "source": "data/*/rounds.csv",
+      "reproduced": 0,
+      "expected": 0,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "R.n_datasets",
+      "family": "R dataset integrity",
+      "source": "data/*/rounds.csv",
+      "reproduced": 9,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "gpt-4.1-mini, gpt-4.1-mini_n11, gpt-4.1-mini_degree, gpt-4.1-mini_overload, gpt-4.1-mini_sigsweep, claude-sonnet-4-6, claude-sonnet-4-6_think, gemini-2.5-flash, hidden-gpt-4.1-mini"
+    },
+    {
+      "id": "R.n_trials_total",
+      "family": "R dataset integrity",
+      "source": "data/*/rounds.csv",
+      "reproduced": 6341,
+      "expected": 6341,
+      "tol": 0,
+      "status": "PASS",
+      "note": "SI Section S6: error-diversity identity checked across all trials"
+    },
+    {
+      "id": "R.error_diversity_max_abs_discrepancy",
+      "family": "R dataset integrity",
+      "source": "data/*/rounds.csv",
+      "reproduced": 0.000161,
+      "expected": 0.00016,
+      "tol": 5e-06,
+      "status": "PASS",
+      "note": "collective Brier error = mean individual error - diversity; SI reports max abs discrepancy 1.6e-4, matched here to the reported precision"
+    },
+    {
+      "id": "R.messages_logged",
+      "family": "R dataset integrity",
+      "source": "data/*/messages.csv",
+      "reproduced": 100185,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": ""
+    },
+    {
+      "id": "R.messages_empty",
+      "family": "R dataset integrity",
+      "source": "data/*/messages.csv",
+      "reproduced": 0,
+      "expected": 0,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I2.degree_vs_capitulation.r",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/beliefs.csv + data/gpt-4.1-mini_degree/beliefs.csv",
+      "reproduced": 0.896232,
+      "expected": 0.9,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "I2.degree_vs_correction.r",
+      "family": "I fan-in and topology",
+      "source": "data/gpt-4.1-mini_n11/beliefs.csv + data/gpt-4.1-mini_degree/beliefs.csv",
+      "reproduced": -0.816664,
+      "expected": -0.82,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "J2.graph_fixed_effects.r",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.356206,
+      "expected": 0.36,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "fan-in and capitulation demeaned within topology"
+    },
+    {
+      "id": "J2.slope.wheel",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.14627,
+      "expected": 0.15,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "change in capitulation per additional unit of fan-in"
+    },
+    {
+      "id": "J2.slope.hierarchy",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.095318,
+      "expected": 0.1,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "change in capitulation per additional unit of fan-in"
+    },
+    {
+      "id": "J2.slope.chain",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.105653,
+      "expected": 0.11,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "change in capitulation per additional unit of fan-in"
+    },
+    {
+      "id": "J2.collinearity.own_vs_neighbour",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": -0.709017,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "wheel is excluded from the conditional own-versus-neighbour reading because own and neighbour fan-in are perfectly collinear there"
+    },
+    {
+      "id": "J2.wheel.collinearity",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 1.0,
+      "expected": 1.0,
+      "tol": 1e-06,
+      "status": "PASS",
+      "note": "perfect collinearity in the wheel"
+    },
+    {
+      "id": "J2.balance.fanin1.p_strong_minority",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.395556,
+      "expected": 0.4,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": "probability of assignment to the strong minority, by fan-in"
+    },
+    {
+      "id": "J2.balance.fanin1.mean_abs_llr",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 1.834846,
+      "expected": 1.8,
+      "tol": 0.15,
+      "status": "PASS",
+      "note": "mean absolute log-likelihood ratio among minority agents"
+    },
+    {
+      "id": "J2.balance.fanin2.p_strong_minority",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.4025,
+      "expected": 0.4,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": "probability of assignment to the strong minority, by fan-in"
+    },
+    {
+      "id": "J2.balance.fanin2.mean_abs_llr",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 1.840252,
+      "expected": 1.8,
+      "tol": 0.15,
+      "status": "PASS",
+      "note": "mean absolute log-likelihood ratio among minority agents"
+    },
+    {
+      "id": "J2.balance.fanin3.p_strong_minority",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.39,
+      "expected": 0.4,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": "probability of assignment to the strong minority, by fan-in"
+    },
+    {
+      "id": "J2.balance.fanin3.mean_abs_llr",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 1.848841,
+      "expected": 1.8,
+      "tol": 0.15,
+      "status": "PASS",
+      "note": "mean absolute log-likelihood ratio among minority agents"
+    },
+    {
+      "id": "J2.balance.fanin4.p_strong_minority",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 0.44,
+      "expected": 0.4,
+      "tol": 0.05,
+      "status": "PASS",
+      "note": "probability of assignment to the strong minority, by fan-in"
+    },
+    {
+      "id": "J2.balance.fanin4.mean_abs_llr",
+      "family": "J positional",
+      "source": "data/gpt-4.1-mini/{beliefs,messages,rounds}.csv",
+      "reproduced": 1.7949,
+      "expected": 1.8,
+      "tol": 0.15,
+      "status": "PASS",
+      "note": "mean absolute log-likelihood ratio among minority agents"
+    },
+    {
+      "id": "G2.gpt-4.1-mini.messages",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 15000,
+      "expected": 15000,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.gpt-4.1-mini.substantive",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.gpt-4.1-mini_other.messages",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 22050,
+      "expected": 22050,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.gpt-4.1-mini_other.substantive",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 0,
+      "expected": 0,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.claude-sonnet-4-6.messages",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 1500,
+      "expected": 1500,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.claude-sonnet-4-6.substantive",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 141,
+      "expected": 141,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.claude-sonnet-4-6_think.messages",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 900,
+      "expected": 900,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.claude-sonnet-4-6_think.substantive",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 0,
+      "expected": 0,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.gemini-2.5-flash.messages",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 885,
+      "expected": 885,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.gemini-2.5-flash.substantive",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 3,
+      "expected": 3,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.conclusion_total",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 40335,
+      "expected": 40335,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "G2.referential_mention_count",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 5281,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "possession language without substantive disclosure"
+    },
+    {
+      "id": "G2.referential_mention_rate",
+      "family": "G channel purity",
+      "source": "data/*/messages.csv",
+      "reproduced": 0.130928,
+      "expected": null,
+      "tol": null,
+      "status": "INFO",
+      "note": "INFORMATIONAL ONLY, not a reported result. The classifier used for the referential-mention figure quoted in earlier drafts was not archived and its value is therefore unrecoverable; that figure has been removed from the Supplementary Materials. The definition recorded here is exploratory and is deliberately not asserted against any reported number. Only the substantive-disclosure quantities are reported and audited."
+    },
+    {
+      "id": "G.focal.claude.msgs_per_trial",
+      "family": "G channel purity",
+      "source": "data/claude-sonnet-4-6/messages.csv",
+      "reproduced": 2.82,
+      "expected": 2.82,
+      "tol": 0.01,
+      "status": "PASS",
+      "note": "50 trials of 15 messages each"
+    },
+    {
+      "id": "G.focal.claude.trials_without_disclosure",
+      "family": "G channel purity",
+      "source": "data/claude-sonnet-4-6/messages.csv",
+      "reproduced": 2,
+      "expected": 2,
+      "tol": 0,
+      "status": "PASS",
+      "note": "only two trials in this cell are free of disclosure"
+    }
+  ]
+}

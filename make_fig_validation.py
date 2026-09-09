@@ -1,7 +1,7 @@
-"""SI Fig. S1 — belief read-out validation: round-0 (pre-communication) elicited belief vs the
+"""SI Fig. S1 — belief readout validation: round-0 (pre-communication) elicited belief vs the
 single-signal Bayesian posterior, per model family. Near-identity (r≈0.999) shows agents compute
 normative beliefs, so downstream failures reflect communication, not an inability to reason.
-System python3. Writes ../figures/figS1_validation.png."""
+System python3. Writes ../figures/figS1_readout_validation.png."""
 import csv
 from collections import defaultdict
 from pathlib import Path
@@ -36,8 +36,8 @@ for ax, (tag, col) in zip(axes, FAMS):
     ax.set_title(tag, fontsize=10)
     ax.set_xlabel("single-signal Bayesian posterior P(A)")
 axes[0].set_ylabel("elicited round-0 belief P(A)")
-fig.suptitle("Belief read-out recovers the Bayesian posterior before communication", fontsize=11.5)
+fig.suptitle("Belief readout recovers the Bayesian posterior before communication", fontsize=11.5)
 plt.tight_layout(rect=[0, 0, 1, 0.95])
-plt.savefig(FIG / "figS1_validation.png", dpi=200, bbox_inches="tight")
+plt.savefig(FIG / "figS1_readout_validation.png", dpi=600, bbox_inches="tight")
 plt.close()
-print("wrote figS1_validation.png")
+print("wrote figS1_readout_validation.png")

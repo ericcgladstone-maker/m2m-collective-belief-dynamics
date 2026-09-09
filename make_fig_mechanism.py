@@ -1,6 +1,6 @@
 """Centerpiece mechanism figure: assignment-based, truth-anchored role transitions with
 seed-clustered paired-bootstrap CIs. Panel A: standard misleading majority — weak-majority
-correction and strong-minority capitulation under evidence vs verdict sharing. Panel B: the same
+correction and strong-minority capitulation under evidence vs conclusion sharing. Panel B: the same
 at extreme fan-in (n=11), where the content contrast disappears (overload). Mirrors
 analyze_stats9.py exactly. System python3. Writes ../figures/fig3_mechanism.png."""
 import csv, random
@@ -16,7 +16,7 @@ matplotlib.rcParams.update({
     "savefig.bbox": "tight",
 })
 EVID = "#009E73"   # evidence (teal, colorblind-safe)
-CONC = "#D55E00"   # verdict (vermillion)
+CONC = "#D55E00"   # conclusion (vermillion)
 random.seed(0)
 HERE = Path(__file__).parent
 FIG = HERE.parent / "figures"
@@ -77,7 +77,7 @@ def panel(ax, tag, rg, tp, title):
     # groups: weak-majority correction (idx0), strong-minority capitulation (idx1)
     groups = ["weak-majority\ncorrection", "strong-minority\ncapitulation"]
     x = np.arange(2); wbar = 0.36
-    for j, (d, lab, col) in enumerate([(ev, "evidence", EVID), (co, "verdict", CONC)]):
+    for j, (d, lab, col) in enumerate([(ev, "evidence", EVID), (co, "conclusion", CONC)]):
         ys, los, his = [], [], []
         for idx in (0, 1):
             b, lo, hi = est_ci(d, idx)
@@ -94,8 +94,7 @@ panel(axA, "gpt-4.1-mini", "misleading_majority", "all_channel",
       "A  Standard misleading majority (n=5)")
 panel(axB, "gpt-4.1-mini_n11", "misleading_majority", "all_channel",
       "B  Extreme fan-in (n=11): content contrast disappears")
-fig.suptitle("Evidence enables majority correction and limits minority capitulation; "
-             "verdicts do the reverse", fontsize=11)
+fig.suptitle("Role transitions by communication content", fontsize=11)
 plt.tight_layout(rect=[0, 0, 1, 0.95])
-plt.savefig(FIG / "fig3_mechanism.png", dpi=200); plt.close()
-print("wrote fig3_mechanism.png")
+plt.savefig(FIG / "fig3_role_transitions.png", dpi=600); plt.close()
+print("wrote fig3_role_transitions.png")
