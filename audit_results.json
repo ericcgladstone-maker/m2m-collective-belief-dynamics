@@ -3,11 +3,11 @@
   "seed": 20260909,
   "bootstrap_draws": 10000,
   "summary": {
-    "total": 390,
-    "passed": 367,
+    "total": 451,
+    "passed": 428,
     "failed": 0,
     "info": 23,
-    "assertions": 367
+    "assertions": 428
   },
   "results": [
     {
@@ -3909,6 +3909,616 @@
       "tol": 0,
       "status": "PASS",
       "note": "only two trials in this cell are free of disclosure"
+    },
+    {
+      "id": "P2.cell.n_seeds",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 50,
+      "expected": 50,
+      "tol": 0,
+      "status": "PASS",
+      "note": "misleading-majority, all-channel, conclusion-sharing cell"
+    },
+    {
+      "id": "P2.selection.lowest_seed",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0,
+      "expected": 0,
+      "tol": 0,
+      "status": "PASS",
+      "note": "selection rule: lowest-numbered seed in that cell"
+    },
+    {
+      "id": "P2.findings.n",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 5,
+      "expected": 5,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.findings.favor_zeta",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 3,
+      "expected": 3,
+      "tol": 0,
+      "status": "PASS",
+      "note": "three of five individual findings favour Zeta, the wrong material"
+    },
+    {
+      "id": "P2.findings.favor_theta",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 2,
+      "expected": 2,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.net_combined_weight",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 3.208233,
+      "expected": 3.21,
+      "tol": 0.006,
+      "status": "PASS",
+      "note": "net latent weight favouring the correct material, Theta"
+    },
+    {
+      "id": "P2.truth_is_theta",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.snippet_majority_favours_zeta",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": "a vote over individual findings favours the wrong material"
+    },
+    {
+      "id": "P2.generator_matches_archive.truth",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py + data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.generator_matches_archive.snippet_majority",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py + data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding0.favors_zeta",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding0.weight",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 0.152695,
+      "expected": 0.15,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding0.text",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": "finding text as shown to the analyst matches the value printed in S11"
+    },
+    {
+      "id": "P2.finding1.favors_zeta",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding1.weight",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 0.251421,
+      "expected": 0.25,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding1.text",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": "finding text as shown to the analyst matches the value printed in S11"
+    },
+    {
+      "id": "P2.finding2.favors_zeta",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 0,
+      "expected": 0,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding2.weight",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1.977141,
+      "expected": 1.98,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding2.text",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": "finding text as shown to the analyst matches the value printed in S11"
+    },
+    {
+      "id": "P2.finding3.favors_zeta",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 0,
+      "expected": 0,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding3.weight",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1.978556,
+      "expected": 1.98,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding3.text",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": "finding text as shown to the analyst matches the value printed in S11"
+    },
+    {
+      "id": "P2.finding4.favors_zeta",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding4.weight",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 0.343349,
+      "expected": 0.34,
+      "tol": 0.005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.finding4.text",
+      "family": "P hidden-profile probe",
+      "source": "code/tasks_hidden.py",
+      "reproduced": 1,
+      "expected": 1,
+      "tol": 0,
+      "status": "PASS",
+      "note": "finding text as shown to the analyst matches the value printed in S11"
+    },
+    {
+      "id": "P2.round0.n_agents",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 5,
+      "expected": 5,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round0.agent0.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.55,
+      "expected": 0.55,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round0.agent1.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.3,
+      "expected": 0.3,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round0.agent2.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.05,
+      "expected": 0.05,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round0.agent3.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.05,
+      "expected": 0.05,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round0.agent4.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.3,
+      "expected": 0.3,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round0.pooled_p_zeta",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.185947,
+      "expected": 0.186,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round0.pooled_p_true",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.814053,
+      "expected": 0.814,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": "true material is Theta, mapped to B"
+    },
+    {
+      "id": "P2.round1.n_agents",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 5,
+      "expected": 5,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round1.agent0.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.3,
+      "expected": 0.3,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round1.agent1.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.3,
+      "expected": 0.3,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round1.agent2.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round1.agent3.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round1.agent4.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.3,
+      "expected": 0.3,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round1.pooled_p_zeta",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.199844,
+      "expected": 0.2,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round1.pooled_p_true",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.800156,
+      "expected": 0.8,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": "true material is Theta, mapped to B"
+    },
+    {
+      "id": "P2.round2.n_agents",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 5,
+      "expected": 5,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round2.agent0.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.2,
+      "expected": 0.2,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round2.agent1.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.2,
+      "expected": 0.2,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round2.agent2.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.05,
+      "expected": 0.05,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round2.agent3.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round2.agent4.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round2.pooled_p_zeta",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.116882,
+      "expected": 0.117,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round2.pooled_p_true",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.883118,
+      "expected": 0.883,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": "true material is Theta, mapped to B"
+    },
+    {
+      "id": "P2.round3.n_agents",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 5,
+      "expected": 5,
+      "tol": 0,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round3.agent0.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round3.agent1.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round3.agent2.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.0,
+      "expected": 0.0,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round3.agent3.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.05,
+      "expected": 0.05,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round3.agent4.belief",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.1,
+      "expected": 0.1,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round3.pooled_p_zeta",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.009282,
+      "expected": 0.009,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": ""
+    },
+    {
+      "id": "P2.round3.pooled_p_true",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/full/transcripts.jsonl",
+      "reproduced": 0.990718,
+      "expected": 0.991,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": "true material is Theta, mapped to B"
+    },
+    {
+      "id": "P2.round0.rounds_csv_agrees",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.1859,
+      "expected": 0.186,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": "processed cell table agrees with the transcript-derived pool"
+    },
+    {
+      "id": "P2.round1.rounds_csv_agrees",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.1998,
+      "expected": 0.2,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": "processed cell table agrees with the transcript-derived pool"
+    },
+    {
+      "id": "P2.round2.rounds_csv_agrees",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.1169,
+      "expected": 0.117,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": "processed cell table agrees with the transcript-derived pool"
+    },
+    {
+      "id": "P2.round3.rounds_csv_agrees",
+      "family": "P hidden-profile probe",
+      "source": "data/hidden-gpt-4.1-mini/rounds.csv",
+      "reproduced": 0.0093,
+      "expected": 0.009,
+      "tol": 0.0005,
+      "status": "PASS",
+      "note": "processed cell table agrees with the transcript-derived pool"
     }
   ]
 }

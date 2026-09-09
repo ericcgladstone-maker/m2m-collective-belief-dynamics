@@ -19,11 +19,13 @@ N reasoning manipulation; O capability screening; P hidden-profile probe;
 Q signal-structure robustness; R dataset integrity.
 """
 from __future__ import annotations
-import csv, json, math, random, re, statistics as st
+import csv, json, math, random, re, statistics as st, sys
 from collections import defaultdict
 from pathlib import Path
 
 HERE = Path(__file__).parent
+if str(HERE) not in sys.path:            # so tasks_hidden.py resolves from any working directory
+    sys.path.insert(0, str(HERE))
 DATA = HERE / "data"
 SEED = 20260909
 B_RESAMPLE = 10000
@@ -1027,13 +1029,117 @@ def family_G2():
            note="only two trials in this cell are free of disclosure")
 
 
+# ===== P2. HIDDEN-PROFILE WORKED EXAMPLE (SI Section S11) =====
+# Every quantity reported in the S11 example-findings table and worked trial, re-derived from
+# the archived task generator and the archived transcripts. Reported values are assertion
+# targets only. The trial is selected by the rule stated in the SI: the lowest-numbered seed
+# in the misleading-majority, all-channel, conclusion-sharing cell.
+WORKED_CELL = ("misleading_majority", "all_channel", "conclusion_only")
+WORKED_FINDINGS = [
+    # analyst, finding text as printed in S11, favors_zeta, latent weight
+    (0, "a marginal finding from the load-cycling evaluation: Material Zeta slightly edged out "
+        "Material Theta, by a small margin within normal sample-to-sample variation", True, 0.15),
+    (1, "a marginal finding from the thermal-cycling test: Material Zeta slightly edged out "
+        "Material Theta, by a small margin within normal sample-to-sample variation", True, 0.25),
+    (2, "a decisive finding from the fatigue-life assessment: Material Theta clearly and "
+        "consistently outperformed Material Zeta by a large margin across all samples", False, 1.98),
+    (3, "a decisive finding from the vibration-endurance run: Material Theta clearly and "
+        "consistently outperformed Material Zeta by a large margin across all samples", False, 1.98),
+    (4, "a marginal finding from the corrosion-resistance trial: Material Zeta slightly edged out "
+        "Material Theta, by a small margin within normal sample-to-sample variation", True, 0.34),
+]
+WORKED_ROUNDS = [
+    # round, per-agent P(Zeta), pooled P(Zeta), pooled P(true material)
+    (0, [0.55, 0.30, 0.05, 0.05, 0.30], 0.186, 0.814),
+    (1, [0.30, 0.30, 0.10, 0.10, 0.30], 0.200, 0.800),
+    (2, [0.20, 0.20, 0.05, 0.10, 0.10], 0.117, 0.883),
+    (3, [0.10, 0.10, 0.00, 0.05, 0.10], 0.009, 0.991),
+]
+
+def _worked_record():
+    rg, tp, cm = WORKED_CELL
+    seeds = []
+    for line in open(DATA / "hidden-gpt-4.1-mini" / "full" / "transcripts.jsonl"):
+        o = json.loads(line)
+        if o["regime"] == rg and o["topology"] == tp and o["content_mode"] == cm:
+            seeds.append(o)
+    seeds.sort(key=lambda o: int(o["seed"]))
+    return seeds
+
+def family_P2():
+    gen_src = "code/tasks_hidden.py"
+    arc_src = "data/hidden-gpt-4.1-mini/full/transcripts.jsonl"
+    recs = _worked_record()
+    record("P2.cell.n_seeds", "P hidden-profile probe", arc_src, len(recs), 50, 0,
+           note="misleading-majority, all-channel, conclusion-sharing cell")
+    record("P2.selection.lowest_seed", "P hidden-profile probe", arc_src,
+           int(recs[0]["seed"]) if recs else None, 0, 0,
+           note="selection rule: lowest-numbered seed in that cell")
+    rec = recs[0]
+
+    # --- task materials, regenerated deterministically from the archived generator ---
+    import importlib
+    th = importlib.import_module("tasks_hidden")
+    trial = th.generate_hidden_trial(0, "misleading_majority", 5)
+    record("P2.findings.n", "P hidden-profile probe", gen_src, len(trial.findings), 5, 0)
+    n_zeta = sum(1 for f in trial.findings if f.favors_zeta)
+    record("P2.findings.favor_zeta", "P hidden-profile probe", gen_src, n_zeta, 3, 0,
+           note="three of five individual findings favour Zeta, the wrong material")
+    record("P2.findings.favor_theta", "P hidden-profile probe", gen_src,
+           len(trial.findings) - n_zeta, 2, 0)
+    record("P2.net_combined_weight", "P hidden-profile probe", gen_src,
+           abs(trial.signed_total), 3.21, 0.006,
+           note="net latent weight favouring the correct material, Theta")
+    record("P2.truth_is_theta", "P hidden-profile probe", gen_src,
+           0 if trial.true_zeta else 1, 1, 0)
+    record("P2.snippet_majority_favours_zeta", "P hidden-profile probe", gen_src,
+           1 if trial.snippet_majority_zeta else 0, 1, 0,
+           note="a vote over individual findings favours the wrong material")
+    # the regenerated trial must match what the archived run actually used
+    record("P2.generator_matches_archive.truth", "P hidden-profile probe",
+           f"{gen_src} + {arc_src}", 1 if bool(rec["true_zeta"]) == trial.true_zeta else 0, 1, 0)
+    record("P2.generator_matches_archive.snippet_majority", "P hidden-profile probe",
+           f"{gen_src} + {arc_src}",
+           1 if bool(rec["snippet_majority_zeta"]) == trial.snippet_majority_zeta else 0, 1, 0)
+    for idx, text, favz, w in WORKED_FINDINGS:
+        f = trial.findings[idx]
+        record(f"P2.finding{idx}.favors_zeta", "P hidden-profile probe", gen_src,
+               1 if f.favors_zeta else 0, 1 if favz else 0, 0)
+        record(f"P2.finding{idx}.weight", "P hidden-profile probe", gen_src, f.weight, w, 0.005)
+        record(f"P2.finding{idx}.text", "P hidden-profile probe", gen_src,
+               1 if f.describe() == text else 0, 1, 0,
+               note="finding text as shown to the analyst matches the value printed in S11")
+
+    # --- round-level beliefs and pooled trajectory, from the archived transcript ---
+    for rnd, beliefs, pool_z, pool_t in WORKED_ROUNDS:
+        got = [a["belief"] for a in rec["rounds"][rnd]]
+        record(f"P2.round{rnd}.n_agents", "P hidden-profile probe", arc_src, len(got), 5, 0)
+        for i, b in enumerate(beliefs):
+            record(f"P2.round{rnd}.agent{i}.belief", "P hidden-profile probe", arc_src,
+                   got[i] if i < len(got) else None, b, 0.0005)
+        p = _sig(sum(_logit(x) for x in got) / len(got))
+        record(f"P2.round{rnd}.pooled_p_zeta", "P hidden-profile probe", arc_src, p, pool_z, 0.0005)
+        record(f"P2.round{rnd}.pooled_p_true", "P hidden-profile probe", arc_src,
+               1 - p, pool_t, 0.0005, note="true material is Theta, mapped to B")
+    # cross-check the same trajectory against the processed cell table
+    rows = [r for r in rounds_rows("hidden-gpt-4.1-mini")
+            if (r["regime"], r["topology"], r["content_mode"], r["seed"])
+            == (WORKED_CELL[0], WORKED_CELL[1], WORKED_CELL[2], "0")]
+    for rnd, _, pool_z, _ in WORKED_ROUNDS:
+        row = next((r for r in rows if int(r["round"]) == rnd), None)
+        record(f"P2.round{rnd}.rounds_csv_agrees", "P hidden-profile probe",
+               "data/hidden-gpt-4.1-mini/rounds.csv",
+               float(row["coll_logodds"]) if row else None, pool_z, 0.0005,
+               note="processed cell table agrees with the transcript-derived pool")
+
+
 # =============================== RUNNER ===============================
 FAMILIES = [("A", family_A), ("B", family_B), ("C", family_C), ("D", family_D),
             ("E", family_E), ("F", family_F), ("G", family_G), ("H", family_H),
             ("I", family_I), ("J", family_J), ("K", family_K), ("L", family_L),
             ("M", family_M), ("N", family_N), ("O", family_O), ("P", family_P),
             ("Q", family_Q), ("R", family_R),
-            ("I2", family_I2), ("J2", family_J2), ("G2", family_G2)]
+            ("I2", family_I2), ("J2", family_J2), ("G2", family_G2), ("P2", family_P2)]
 
 
 def run_all(verbose=True):
