@@ -1,6 +1,6 @@
 # Communication content and local connectivity shape collective accuracy in networks of machine agents
 
-Code for the distributed-inference experiments in Gladstone (manuscript in preparation), the third paper in the machine-to-machine (M2M) program. Stateless LLM agents each hold a private, noisy signal about a hidden binary state and exchange messages over a network. We manipulate **communication content** (sharing evidence vs. sharing conclusions) and **network topology**, and measure collective accuracy, mean individual error, and belief diversity.
+Code for the distributed-inference experiments in Gladstone (revise and resubmit at *PNAS Nexus*), the third paper in the machine-to-machine (M2M) program. Stateless LLM agents each hold a private, noisy signal about a hidden binary state and exchange messages over a network. We manipulate **communication content** (sharing evidence vs. sharing conclusions) and **network topology**, and measure collective accuracy, mean individual error, and belief diversity.
 
 ## Repository layout
 
@@ -23,4 +23,4 @@ Raw per-round transcripts and per-trial result tables are deposited separately o
 
 ## Citation
 
-Gladstone, E. Communication content and local connectivity shape collective accuracy in networks of machine agents. Manuscript in preparation. (Full citation forthcoming.)
+Gladstone, E. Communication content and local connectivity shape collective accuracy in networks of machine agents. Manuscript, revise and resubmit at *PNAS Nexus*. Author's manuscript: https://graystoneindustries.co/papers/communication-content-and-local-connectivity-shape-collective-accuracy-in-networks-of-machine-agents.pdf

@@ -1,6 +1,6 @@
 # Export notes
 
-This folder is the public code export for the paper *Communication content and local connectivity shape collective accuracy in networks of machine agents* (Gladstone, in preparation), the third paper in the M2M program. It is curated from the project's working `code/` directory.
+This folder is the public code export for the paper *Communication content and local connectivity shape collective accuracy in networks of machine agents* (Gladstone, revise and resubmit at *PNAS Nexus*), the third paper in the M2M program. It is curated from the project's working `code/` directory.
 
 ## What is included
 - The simulation rig (`engine.py`, `tasks.py`, `agents.py`, `provider.py`, `metrics.py`, `config.py`).
