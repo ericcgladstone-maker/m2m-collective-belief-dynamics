@@ -1,0 +1,6 @@
+out/
+figures/
+cap2048_analysis.txt
+analysis.txt
+close_audit_output.txt
+pool_rules_rerun_output.txt
