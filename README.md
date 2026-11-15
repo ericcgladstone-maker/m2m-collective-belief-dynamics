@@ -1,4 +1,4 @@
-# Evidence sharing improves collective accuracy in a language model experiment
+# Evidence sharing yields higher collective accuracy than conclusion sharing in a language model experiment
 
 Code for the distributed-inference experiments in Gladstone (in minor revision at *PNAS Nexus*), the third paper in the machine-to-machine (M2M) program. Stateless LLM agents each hold a private, noisy signal about a hidden binary state and exchange messages over a network. We manipulate **communication content** (sharing evidence vs. sharing conclusions) and **network topology**, and measure collective accuracy, mean individual error, and belief diversity.
 
@@ -32,4 +32,4 @@ Raw per-round transcripts and per-trial result tables are deposited separately o
 
 ## Citation
 
-Gladstone, E. Evidence sharing improves collective accuracy in a language model experiment. Manuscript in minor revision at *PNAS Nexus*.
+Gladstone, E. Evidence sharing yields higher collective accuracy than conclusion sharing in a language model experiment. Manuscript in minor revision at *PNAS Nexus*.

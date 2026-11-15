@@ -1,6 +1,6 @@
 # Export notes
 
-This folder is the public code export for the paper *Evidence sharing improves collective accuracy in a language model experiment* (Gladstone, in minor revision at *PNAS Nexus*), the third paper in the M2M program. It is curated from the project's working `code/` directory.
+This folder is the public code export for the paper *Evidence sharing yields higher collective accuracy than conclusion sharing in a language model experiment* (Gladstone, in minor revision at *PNAS Nexus*), the third paper in the M2M program. It is curated from the project's working `code/` directory.
 
 ## What is included
 - `revision_2026_11/`, the code for the minor revision and the reproduction entry point for the revised manuscript and Supplementary Materials: the strict readout parser, the fixed-message readout replay, the regenerated-message harness, the analyses behind the revised tables, and the Figure 1 script. Its README gives the reproduction commands. Its records are in the OSF folder `revision-2026-11`.
